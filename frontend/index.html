@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas</title>
+    <script src="./js/jquery-3.2.0.js"></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <script>
+        $(document).ready(function() {
+            $("#logout").click(function() {
+                $.ajax({
+        url: "http://localhost:8080/",
+        data: "testing",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        success: function(data) {
+           
+            console.log(data);
+            $( ".inner" ).append(data );
+            
+        },
+        error: function(err) {
+            alert("Failed")
+            console.log(err)
+        }
+
+    })
+
+
+            })
+          
+        })
+    </script>
+</head>
+
+<body>
+    <button class="btn btn-primary" id="logout">Update canvas</button>
+    <div class="inner">Click to load canvas</div>
+</body>
+
+</html>
