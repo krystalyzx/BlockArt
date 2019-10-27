@@ -1,5 +1,5 @@
 # BlockArt
-A fault-tolerant POW blockchain system for collaborative computer art projects.  Please see [Description.pdf](Description.pdf) for more information about the project.
+A fault-tolerant POW blockchain system for collaborative computer art projects written in Go.  Please see [Description.pdf](Description.pdf) for more information about the project.
 
 ## Run Server
 `go run server.go -c config.json`
